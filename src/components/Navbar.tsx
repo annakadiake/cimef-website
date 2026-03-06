@@ -32,14 +32,14 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                  className="text-gray-700 hover:text-[#3F4A1F] font-medium transition-colors"
                 >
                   {link.label}
                 </Link>
               ))}
               <Link
                 href="/contact"
-                className="bg-blue-600 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+                className="bg-gradient-to-r from-[#636B2F] to-[#3F4A1F] text-white px-5 py-2.5 rounded-lg font-medium hover:shadow-lg hover:shadow-[#636B2F]/25 transition-all"
               >
                 Nous Contacter
               </Link>

@@ -47,7 +47,7 @@ export default function Home() {
               <div className="flex flex-wrap gap-3">
                 <Link
                   href="/contact"
-                  className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+                  className="bg-gradient-to-r from-[#636B2F] to-[#3F4A1F] text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg hover:shadow-[#636B2F]/25 transition-all"
                 >
                   Nous Contacter
                 </Link>
@@ -79,8 +79,8 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
               <div key={index} className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                  <service.icon className="w-6 h-6 text-blue-600" />
+                <div className="w-12 h-12 bg-[#636B2F]/10 rounded-lg flex items-center justify-center mb-4">
+                  <service.icon className="w-6 h-6 text-[#636B2F]" />
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-2">{service.title}</h3>
                 <p className="text-sm text-gray-600">{service.desc}</p>
@@ -105,8 +105,8 @@ export default function Home() {
               { icon: Shield, label: 'Sécurité', value: '100%' },
             ].map((item) => (
               <div key={item.label} className="bg-white p-6 rounded-lg border border-gray-200 text-center">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <item.icon className="w-6 h-6 text-blue-600" />
+                <div className="w-12 h-12 bg-[#636B2F]/10 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <item.icon className="w-6 h-6 text-[#636B2F]" />
                 </div>
                 <p className="text-xl font-bold text-gray-900">{item.value}</p>
                 <p className="text-sm text-gray-600">{item.label}</p>
@@ -117,7 +117,7 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-blue-600">
+      <section className="py-16 bg-gradient-to-r from-[#3F4A1F] to-[#636B2F]">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             Prenez soin de votre santé
@@ -128,7 +128,7 @@ export default function Home() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/contact"
-              className="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
+              className="bg-white text-[#3F4A1F] px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
             >
               Nous Contacter
             </Link>
