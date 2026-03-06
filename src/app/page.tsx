@@ -41,23 +41,8 @@ export default function Home() {
               <h1 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-4">
                 Cabinet d&apos;Imagerie Médicale CIMEF
               </h1>
-              <p className="text-gray-600 mb-6">
-                Services d&apos;imagerie médicale à Tivaouane.
-              </p>
-              <div className="flex flex-wrap gap-3">
-                <Link
-                  href="/contact"
-                  className="bg-gradient-to-r from-[#636B2F] to-[#3F4A1F] text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg hover:shadow-[#636B2F]/25 transition-all"
-                >
-                  Nous Contacter
-                </Link>
-                <a
-                  href="tel:+221773002697"
-                  className="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors"
-                >
-                  Appeler
-                </a>
-              </div>
+              
+              
             </div>
             <div className="relative hidden md:block">
               <div className="w-full max-w-sm mx-auto bg-white rounded-lg p-8 shadow-sm">
@@ -69,23 +54,64 @@ export default function Home() {
       </section>
 
 
-      {/* Services */}
+      {/* Photos Cabinet */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-10">
-            <h2 className="text-2xl font-bold text-gray-900 mb-3">Nos Services</h2>
-            <p className="text-gray-600">Imagerie médicale moderne</p>
+            <h2 className="text-2xl font-bold text-gray-900 mb-3">Notre Cabinet</h2>
+            <p className="text-gray-600">Découvrez nos installations modernes</p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service, index) => (
-              <div key={index} className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-                <div className="w-12 h-12 bg-[#636B2F]/10 rounded-lg flex items-center justify-center mb-4">
-                  <service.icon className="w-6 h-6 text-[#636B2F]" />
+          <div className="relative overflow-hidden rounded-xl">
+            <div className="flex transition-transform duration-500 ease-in-out">
+              {/* Photo 1 - Accueil */}
+              <div className="w-full flex-shrink-0">
+                <div className="relative h-96 bg-gray-100 rounded-xl overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#636B2F]/20 to-[#3F4A1F]/20 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
+                        <Image src="/logo.png" alt="CIMEF" width={80} height={80} className="w-16 h-16 object-contain" />
+                      </div>
+                      <h3 className="text-2xl font-bold text-white mb-2">Espace Accueil</h3>
+                      <p className="text-white/90">Un accueil chaleureux et professionnel</p>
+                    </div>
+                  </div>
                 </div>
-                <h3 className="font-semibold text-gray-900 mb-2">{service.title}</h3>
-                <p className="text-sm text-gray-600">{service.desc}</p>
               </div>
-            ))}
+              {/* Photo 2 - Salle d'examen */}
+              <div className="w-full flex-shrink-0">
+                <div className="relative h-96 bg-gray-100 rounded-xl overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#636B2F]/20 to-[#3F4A1F]/20 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
+                        <Scan className="w-12 h-12 text-[#636B2F]" />
+                      </div>
+                      <h3 className="text-2xl font-bold text-white mb-2">Salle d'Examen</h3>
+                      <p className="text-white/90">Équipements de pointe pour des diagnostics précis</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* Photo 3 - Salle d'attente */}
+              <div className="w-full flex-shrink-0">
+                <div className="relative h-96 bg-gray-100 rounded-xl overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#636B2F]/20 to-[#3F4A1F]/20 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
+                        <Users className="w-12 h-12 text-[#636B2F]" />
+                      </div>
+                      <h3 className="text-2xl font-bold text-white mb-2">Salle d'Attente</h3>
+                      <p className="text-white/90">Confort et tranquillité pour nos patients</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* Navigation dots */}
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+              <div className="w-2 h-2 bg-white rounded-full"></div>
+              <div className="w-2 h-2 bg-white/50 rounded-full"></div>
+              <div className="w-2 h-2 bg-white/50 rounded-full"></div>
+            </div>
           </div>
         </div>
       </section>
