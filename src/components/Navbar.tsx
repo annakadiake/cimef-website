@@ -23,7 +23,7 @@ export default function Navbar() {
           <div className="flex justify-between items-center h-16 md:h-20">
             {/* Logo */}
             <Link href="/">
-              <Image src="/logo.png" alt="CIMEF" width={112} height={112} className="w-24 h-24 md:w-28 md:h-28 object-contain" />
+              <Image src="/logo.png" alt="CIMEF" width={80} height={80} className="w-16 h-16 md:w-20 md:h-20 object-contain" />
             </Link>
 
             {/* Desktop links */}
@@ -32,15 +32,14 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-gray-700 hover:text-[#3F4A1F] font-medium transition-colors relative group"
+                  className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
                 >
                   {link.label}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#636B2F] transition-all group-hover:w-full" />
                 </Link>
               ))}
               <Link
                 href="/contact"
-                className="bg-gradient-to-r from-[#636B2F] to-[#3F4A1F] text-white px-5 py-2.5 rounded-lg font-medium hover:shadow-lg hover:shadow-[#636B2F]/25 transition-all"
+                className="bg-blue-600 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-blue-700 transition-colors"
               >
                 Nous Contacter
               </Link>
