@@ -79,12 +79,15 @@ export default function Home() {
             <div className="flex transition-transform duration-500 ease-in-out">
               {/* Photo 1 - Accueil */}
               <div className="w-full flex-shrink-0">
-                <div className="relative h-96 bg-gray-100 rounded-2xl overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#636B2F]/20 to-[#3F4A1F]/20 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
-                        <Image src="/logo.png" alt="CIMEF" width={80} height={80} className="w-16 h-16 object-contain" />
-                      </div>
+                <div className="relative h-96 rounded-2xl overflow-hidden">
+                  <Image 
+                    src="/photo1.jpeg" 
+                    alt="Espace Accueil CIMEF" 
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent flex items-end justify-center">
+                    <div className="text-center pb-8 px-4">
                       <h3 className="text-2xl font-bold text-white mb-2">Espace Accueil</h3>
                       <p className="text-white/90">Un accueil chaleureux et professionnel</p>
                     </div>
@@ -93,12 +96,15 @@ export default function Home() {
               </div>
               {/* Photo 2 - Salle d'examen */}
               <div className="w-full flex-shrink-0">
-                <div className="relative h-96 bg-gray-100 rounded-2xl overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#636B2F]/20 to-[#3F4A1F]/20 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
-                        <Scan className="w-12 h-12 text-[#636B2F]" />
-                      </div>
+                <div className="relative h-96 rounded-2xl overflow-hidden">
+                  <Image 
+                    src="/photo2.jpeg" 
+                    alt="Salle d'Examen CIMEF" 
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent flex items-end justify-center">
+                    <div className="text-center pb-8 px-4">
                       <h3 className="text-2xl font-bold text-white mb-2">Salle d'Examen</h3>
                       <p className="text-white/90">Équipements de pointe pour des diagnostics précis</p>
                     </div>
@@ -107,14 +113,34 @@ export default function Home() {
               </div>
               {/* Photo 3 - Salle d'attente */}
               <div className="w-full flex-shrink-0">
-                <div className="relative h-96 bg-gray-100 rounded-2xl overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#636B2F]/20 to-[#3F4A1F]/20 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
-                        <Users className="w-12 h-12 text-[#636B2F]" />
-                      </div>
+                <div className="relative h-96 rounded-2xl overflow-hidden">
+                  <Image 
+                    src="/photo3.jpeg" 
+                    alt="Salle d'Attente CIMEF" 
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent flex items-end justify-center">
+                    <div className="text-center pb-8 px-4">
                       <h3 className="text-2xl font-bold text-white mb-2">Salle d'Attente</h3>
                       <p className="text-white/90">Confort et tranquillité pour nos patients</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* Photo 4 - Équipements */}
+              <div className="w-full flex-shrink-0">
+                <div className="relative h-96 rounded-2xl overflow-hidden">
+                  <Image 
+                    src="/photo4.jpeg" 
+                    alt="Équipements Médicaux CIMEF" 
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent flex items-end justify-center">
+                    <div className="text-center pb-8 px-4">
+                      <h3 className="text-2xl font-bold text-white mb-2">Équipements</h3>
+                      <p className="text-white/90">Technologie de pointe au service de votre santé</p>
                     </div>
                   </div>
                 </div>
@@ -123,6 +149,7 @@ export default function Home() {
             {/* Navigation dots */}
             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
               <div className="w-2 h-2 bg-white rounded-full"></div>
+              <div className="w-2 h-2 bg-white/50 rounded-full"></div>
               <div className="w-2 h-2 bg-white/50 rounded-full"></div>
               <div className="w-2 h-2 bg-white/50 rounded-full"></div>
             </div>
@@ -160,8 +187,8 @@ export default function Home() {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-[#636B2F]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Phone className="w-8 h-8 text-[#636B2F]" />
+              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Phone className="w-8 h-8 text-red-600" />
               </div>
               <h3 className="font-semibold text-gray-900 mb-2">Téléphone</h3>
               <p className="text-gray-600">
