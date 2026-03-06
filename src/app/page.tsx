@@ -3,7 +3,7 @@ import Image from 'next/image';
 import {
   Scan, Activity, Waves,
   Heart, Zap, Baby, Clock, Users, Award,
-  Shield, ArrowRight, Phone, CheckCircle2,
+  Shield, ArrowRight, Phone, CheckCircle2, Mail, MapPin,
 } from 'lucide-react';
 
 const services = [
@@ -169,8 +169,8 @@ export default function Home() {
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-[#636B2F]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Mail className="w-8 h-8 text-[#636B2F]" />
+              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Mail className="w-8 h-8 text-red-600" />
               </div>
               <h3 className="font-semibold text-gray-900 mb-2">Email</h3>
               <p className="text-gray-600">
@@ -178,8 +178,8 @@ export default function Home() {
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-[#636B2F]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MapPin className="w-8 h-8 text-[#636B2F]" />
+              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <MapPin className="w-8 h-8 text-red-600" />
               </div>
               <h3 className="font-semibold text-gray-900 mb-2">Adresse</h3>
               <p className="text-gray-600">Tivaouane, Sénégal</p>
