@@ -8,6 +8,15 @@ import { CheckCircle2, Phone } from 'lucide-react';
 
 const services = [
   {
+    title: 'Consultation générale',
+    desc: 'Consultations médicales pour tous types de problèmes de santé.',
+    details: [
+      'Consultation de médecine générale',
+      'Bilan de santé complet',
+      'Orientations spécialisées',
+    ],
+  },
+  {
     title: 'Échographie',
     desc: 'Examens échographiques complets pour un diagnostic précis.',
     details: [
@@ -40,6 +49,21 @@ const services = [
     desc: 'Radiographies numériques pour un diagnostic rapide.',
     details: [
       'Radiographie standard toutes régions',
+      'Examens spéciaux : Hystérosalpingographie (HSG)',
+      'Urographie intra-veineuse (UCR)',
+      'Lavement baryté',
+      'Transit œso-gastroduodénal (TOGD)',
+    ],
+  },
+  {
+    title: 'Analyse biomédicale',
+    desc: 'Analyses de laboratoire pour un diagnostic complet.',
+    details: [
+      'Analyse sanguine complète',
+      'Analyse d\'urine',
+      'Analyse biochimique',
+      'Hématologie',
+      'Sérologie',
     ],
   },
 ];

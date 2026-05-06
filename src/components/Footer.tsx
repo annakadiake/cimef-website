@@ -211,6 +211,17 @@ export default function Footer() {
                   <span>Soins avec cœur</span>
                 </div>
               </div>
+              <div className="flex items-center gap-2">
+                <span className="text-gray-500 text-xs">Site créé par</span>
+                <a 
+                  href="https://wa.me/221771628671" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-[#c8d96f] hover:text-[#a8b35a] transition text-xs font-semibold"
+                >
+                  A-K
+                </a>
+              </div>
             </div>
           </div>
         </div>
