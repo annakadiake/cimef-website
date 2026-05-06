@@ -4,12 +4,72 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Phone, Mail, MapPin } from 'lucide-react';
+import Head from 'next/head';
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
+  }, []);
+
+  // SEO structured data
+  useEffect(() => {
+    const structuredData = {
+      "@context": "https://schema.org",
+      "@type": "MedicalClinic",
+      "name": "CIMEF Tivaouane - Premier Cabinet d'Imagerie Médicale",
+      "description": "Cabinet d'Imagerie Médicale et d'Explorations Fonctionnelles à Tivaouane. Radiographie, échographie, ECG, analyses biomédicales et consultations médicales. Service d'urgence 24/7. Prenez rendez-vous au +221 77 300 26 97.",
+      "url": "https://cimef-tivaouane.com",
+      "telephone": "+221 77 300 26 97",
+      "email": "cimeftivaouane@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tivaouane",
+        "addressCountry": "Sénégal"
+      },
+      "openingHours": "Mo-Su 00:00-24:00",
+      "priceRange": "Consultations et examens médicaux",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "15.9535",
+        "longitude": "-16.7713"
+      },
+      "sameAs": [
+        "https://wa.me/221773002697"
+      ],
+      "services": [
+        {
+          "@type": "MedicalProcedure",
+          "name": "Consultation médicale",
+          "description": "Consultations générales et spécialisées à Tivaouane"
+        },
+        {
+          "@type": "MedicalProcedure", 
+          "name": "Radiographie",
+          "description": "Radiographies numériques standards et examens spécialisés (HSG, UCR, TOGD)"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Échographie",
+          "description": "Échographies abdominale, pelvienne, obstétricale et vasculaire"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Analyse biomédicale",
+          "description": "Analyses de laboratoire sanguines, urinaires et biochimiques"
+        }
+      ]
+    };
+
+    // Update or create structured data script
+    let script = document.querySelector('script[type="application/ld+json"]') as HTMLScriptElement;
+    if (!script) {
+      script = document.createElement('script') as HTMLScriptElement;
+      script.type = 'application/ld+json';
+      script.innerHTML = JSON.stringify(structuredData);
+      document.head.appendChild(script);
+    }
   }, []);
 
   const services = [
@@ -47,6 +107,24 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>CIMEF Tivaouane - Premier Cabinet d'Imagerie Médicale | Radiographie & Échographie</title>
+        <meta name="description" content="Cabinet d'Imagerie Médicale CIMEF à Tivaouane. Radiographie, échographie, ECG, analyses biomédicales et consultations médicales. Service d'urgence 24/7. Prenez rendez-vous au +221 77 300 26 97." />
+        <meta name="keywords" content="cabinet médical tivaouane, clinique tivaouane, imagerie médicale tivaouane, radiographie tivaouane, échographie tivaouane, CIMEF, centre de santé tivaouane, analyse biomédicale tivaouane, consultation médicale tivaouane, ECG tivaouane" />
+        <meta name="geo.position" content="15.9535;-16.7713" />
+        <meta name="geo.placename" content="Tivaouane, Sénégal" />
+        <meta name="geo.region" content="SN" />
+        <meta name="ICBM" content="Tivaouane, Sénégal" />
+        <link rel="canonical" href="https://cimef-tivaouane.com" />
+        <meta property="og:title" content="CIMEF Tivaouane - Premier Cabinet d'Imagerie Médicale" />
+        <meta property="og:description" content="Cabinet d'Imagerie Médicale CIMEF à Tivaouane. Radiographie, échographie, ECG, analyses biomédicales et consultations médicales." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://cimef-tivaouane.com" />
+        <meta property="og:locale" content="fr_SN" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="CIMEF Tivaouane - Premier Cabinet d'Imagerie Médicale" />
+        <meta name="twitter:description" content="Cabinet d'Imagerie Médicale CIMEF à Tivaouane. Radiographie, échographie, ECG, analyses biomédicales." />
+      </Head>
       <main>
         <style>{`
           @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap');
