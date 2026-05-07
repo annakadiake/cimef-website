@@ -50,7 +50,8 @@ const services = [
     details: [
       'Radiographie standard toutes régions',
       'Examens spéciaux : Hystérosalpingographie (HSG)',
-      'Urographie intra-veineuse (UCR)',
+      'Urographie intra-veineuse',
+      'Uretrocystographie rétrograde(UCR)',
       'Lavement baryté',
       'Transit œso-gastroduodénal (TOGD)',
     ],
